@@ -58,9 +58,3 @@ printed to screen, job-ids are also written to provided file.
 
 
 
-
-
-## Examples
-
-
-
