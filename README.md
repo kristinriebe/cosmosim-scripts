@@ -33,7 +33,7 @@ Usage: `bash cosmosim-multiqueries.sh file.txt`
 or `bash cosmosim-multiqueries-uc.sh file.txt`  
 
 Sends multiple queries as specified within the script to the CosmoSim database
-and stored the job id for each job in the provided file.
+and stores the job id for each job in the provided file.
 
 **cosmosim-download**  
 Usage: `bash cosmosim-download.sh file.txt`  
@@ -48,7 +48,7 @@ or `bash cosmosim-delete-uc.sh file.txt`
 
 Deletes jobs with job-ids in given file.
 
-**cosmosim-getjobids**
+**cosmosim-getjobids**  
 Usage: `bash cosmosim-getjobids.sh pattern newfile.txt`  
 or `bash cosmosim-getjobids-uc.sh pattern newfile.txt`  
 
