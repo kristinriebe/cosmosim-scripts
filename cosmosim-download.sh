@@ -26,7 +26,7 @@ fi
 username='xxusernamexx'
 password='xxpasswordxx'
 
-url='http://www.cosmosim.org/uws/query'
+url='https://www.cosmosim.org/uws/query'
 
 idfile=$1
 

@@ -27,7 +27,7 @@ username='xxusernamexx'
 password='xxpasswordxx'
 uws="./uws"
 
-url='http://www.cosmosim.org/uws/query'
+url='https://www.cosmosim.org/uws/query'
 
 idfile=$1
 

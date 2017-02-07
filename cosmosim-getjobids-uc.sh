@@ -26,13 +26,13 @@ username='xxusernamexx'
 password='xxpasswordxx'
 uws="./uws"
 
-url='http://www.cosmosim.org/uws/query'
+url='https://www.cosmosim.org/uws/query'
 
 namepattern=$1
 idfile=$2
 
 # first get complete joblist, i.e. job name, jobid and status, then filter by namepattern
-cmd="$uws --host www.cosmosim.org/uws/query --user $username --password $password list"
+cmd="$uws --host $url --user $username --password $password list"
 #echo "$cmd"
 joblist=`$cmd | awk '/^[^=L ]/{ if ($2 ~ /'$namepattern'/) {print $0;}}'`
 echo "Jobs matching the given pattern (jobname, jobid, status): "

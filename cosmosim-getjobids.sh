@@ -25,13 +25,13 @@ fi
 username='xxusernamexx'
 password='xxpasswordxx'
 
-url='http://www.cosmosim.org/uws/query'
+url='https://www.cosmosim.org/uws/query'
 
 namepattern=$1
 idfile=$2
 
 # first get complete joblist, i.e. job name, jobid and status
-cmd="http --auth ${username}:${password} --print b GET http://www.cosmosim.org/uws/query"
+cmd="http --auth ${username}:${password} --print b GET $url"
 #echo "$cmd" 
 joblist=`$cmd | \
 	awk '{if ($1 ~ /uws:jobref/) {\
