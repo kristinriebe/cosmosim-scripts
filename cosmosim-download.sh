@@ -5,7 +5,7 @@
 # Needs httpie: 
 #     https://github.com/jkbr/httpie
 # Documentation on CosmoSim's UWS interface: 
-#     http://www.cosmosim.org/cms/documentation/data-access/access-via-uws/
+#     https://www.cosmosim.org/cms/documentation/data-access/access-via-uws/
 #
 # 
 # Usage: bash cosmosim-download.sh idfile

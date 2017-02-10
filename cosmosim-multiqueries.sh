@@ -5,7 +5,7 @@
 # Needs httpie: 
 #     https://github.com/jkbr/httpie
 # Documentation on CosmoSim's UWS interface: 
-#     http://www.cosmosim.org/cms/documentation/data-access/access-via-uws/
+#     https://www.cosmosim.org/cms/documentation/data-access/access-via-uws/
 # 
 # Usage: bash cosmosim-multiqueries.sh idfile
 #
@@ -20,7 +20,7 @@
 #
 # Note: This script does NOT check for any kind of errors! 
 # It is meant mainly for demonstration purposes, please consider using a proper client
-# like https://github.com/adrpar/uws-client for your science queries.
+# like https://github.com/aipescience/uws-client for your science queries.
 #
 #
 # Author: Kristin Riebe, AIP, November 2014

@@ -7,7 +7,7 @@
 # Needs httpie: 
 #     https://github.com/jkbr/httpie
 # Documentation on CosmoSim's UWS interface: 
-#     http://www.cosmosim.org/cms/documentation/data-access/access-via-uws/
+#     https://www.cosmosim.org/cms/documentation/data-access/access-via-uws/
 # 
 # Author: Kristin Riebe, AIP, November 2014
 
@@ -32,22 +32,29 @@ idfile=$2
 
 # first get complete joblist, i.e. job name, jobid and status
 cmd="http --auth ${username}:${password} --print b GET $url"
-#echo "$cmd" 
+echo "$cmd" 
 joblist=`$cmd | \
-	awk '{if ($1 ~ /uws:jobref/) {\
-			gsub(/id=/,"",$2); gsub(/"/,"",$2); jobname=$2; \
-			gsub(/xlink:href=.*\/query\//,"",$3); gsub(/"/,"",$3); jobid=$3;\
-		  }\
-		  if ($1 ~ /uws:phase/) {\
-		    gsub(/.*<uws:phase>/,"",$1); gsub(/<\/uws:phase>/,"",$1); phase=$1; \
-		    print jobid, jobname, phase \
-		  } \
-		 }'`
+        awk '{if ($1 ~ /:jobref/ && $1 !~ /<\//) {\
+                        jobname = $0;\
+                  			gsub(/.* runId="/,"",jobname);\
+                        gsub(/".*/,"",jobname);\
+                        jobid = $0;\
+                  			gsub(/.* id="/,"",jobid); gsub(/".*/,"",jobid);\
+                  }\
+                  if ($1 ~ /:phase/) {\
+                    phase = $0;\
+                    gsub(/<\/.*/,"",phase);\
+                    gsub(/.*:phase>/,"",phase);\
+                    print jobid, jobname, phase \
+                  } \
+                 }'`
+
 
 # now filter by namepattern
 echo "Jobs matching the given pattern (jobid, jobname, status): "
 
 # -- print to terminal only
+echo "joblist: $joblist"
 #echo "$joblist" | awk '{if ($2 ~ /'$namepattern'/) {print $0;}}'		 
 
 # -- also print ids to given file 

@@ -3,9 +3,9 @@
 # Download results as csv-files for jobids read from given file 
 #
 # Needs uws-client: 
-#     https://github.com/adrpar/uws-client/
+#     https://github.com/aipescience/uws-client/
 # Documentation on CosmoSim's UWS interface: 
-#     http://www.cosmosim.org/cms/documentation/data-access/access-via-uws/
+#     https://www.cosmosim.org/cms/documentation/data-access/access-via-uws/
 #
 # 
 # Usage: bash cosmosim-download-uc.sh idfile
@@ -25,7 +25,7 @@ fi
 
 username='xxusernamexx'
 password='xxpasswordxx'
-uws="./uws"
+uws="uws"
 
 url='https://www.cosmosim.org/uws/query'
 

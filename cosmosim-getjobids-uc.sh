@@ -5,9 +5,9 @@
 # Usage: bash cosmosim-multiqueries.sh namepattern
 #
 # Needs uws-client: 
-#     https://github.com/adrpar/uws-client/
+#     https://github.com/aipescience/uws-client/
 # Documentation on CosmoSim's UWS interface: 
-#     http://www.cosmosim.org/cms/documentation/data-access/access-via-uws/
+#     https://www.cosmosim.org/cms/documentation/data-access/access-via-uws/
 # 
 # Author: Kristin Riebe, AIP, November 2014
 
@@ -24,7 +24,7 @@ fi
 
 username='xxusernamexx'
 password='xxpasswordxx'
-uws="./uws"
+uws="uws"
 
 url='https://www.cosmosim.org/uws/query'
 
